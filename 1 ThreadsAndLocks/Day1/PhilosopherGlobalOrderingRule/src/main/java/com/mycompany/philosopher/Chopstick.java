@@ -15,4 +15,11 @@ public class Chopstick
         this.id = id;
     }
     private int id;
+
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
+    }
 }
