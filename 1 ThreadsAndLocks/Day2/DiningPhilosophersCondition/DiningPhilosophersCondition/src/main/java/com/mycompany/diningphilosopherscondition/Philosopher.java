@@ -66,7 +66,7 @@ public class Philosopher extends Thread {
         table.lock();
         try {
             while (left.eating || right.eating) {
-                condition.await();
+                condition.await(); // releases table lock
             }
             eating = true;
             System.out.println("Philosopher " + thisPhilosophersNo + " is eating");
