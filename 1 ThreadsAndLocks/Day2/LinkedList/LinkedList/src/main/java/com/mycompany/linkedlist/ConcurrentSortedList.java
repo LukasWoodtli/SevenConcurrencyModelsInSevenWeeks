@@ -37,27 +37,35 @@ public class ConcurrentSortedList {
     }
     
     public void insert(int value) {
+        System.out.println("Start inserting " + value);
         Node current = head;
         current.lock.lock();
+        System.out.println("Locking " + current.value);
         Node next = current.next;
         try {
             while (true) {
                 next.lock.lock();
+                System.out.println("Locking " + next.value);
                 try {
                     if (next == tail || next.value < value) {
                         Node node = new Node(value, current, next);
                         next.prev = node;
                         current.next = node;
+                        System.out.println("Inserting: " + current.value +
+                                           " Current: " + current.value + 
+                                           " Next: " + next.value);
                         return;
                     }
                 } finally {
                     current.lock.unlock();
+                    System.out.println("Un-Locking " + current.value);
                 }
                 current = next;
                 next = current.next;
             }
         } finally {
             next.lock.unlock();
+            System.out.println("Un-Locking " + next.value);
         }
     }
     
