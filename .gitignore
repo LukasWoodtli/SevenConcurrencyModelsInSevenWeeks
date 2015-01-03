@@ -14,4 +14,5 @@ Code from Book/code/
 /1 ThreadsAndLocks/Day3/WordCount/target/
 /1 ThreadsAndLocks/Day3/WordCountProducerConsumer/target/
 /1 ThreadsAndLocks/Day3/WordCountSynchronizedHashMap/target/
-/1 ThreadsAndLocks/Day3/WordCountConcurrentHashMap/target/  
+/1 ThreadsAndLocks/Day3/WordCountConcurrentHashMap/target/
+/1 ThreadsAndLocks/Day3/WordCountBatchConcurrentHashMap/target/
