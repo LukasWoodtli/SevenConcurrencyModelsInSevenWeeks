@@ -11,6 +11,8 @@ import java.util.concurrent.BlockingQueue;
 /**
  *
  * @author Boot
+ * 
+ * Consumer
  */
 public class Counter implements Runnable {
     private BlockingQueue<Page> queue;
@@ -26,6 +28,7 @@ public class Counter implements Runnable {
             while (true) {
                 Page page = queue.take();
                 if (page.isPoisonPill()) {
+                    System.out.println("Poison pill consumed. Thread: " + this);
                     break;
                 }
                 

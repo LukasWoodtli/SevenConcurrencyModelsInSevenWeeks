@@ -20,8 +20,8 @@ public class WordCount {
     private static final int NUM_COUNTERS = 4;
     
     public static void main(String[] arg) throws Exception {
-        ArrayBlockingQueue<Page> queue = new ArrayBlockingQueue<Page>(100);
-        ConcurrentHashMap<String, Integer> counts = new ConcurrentHashMap<String, Integer>();
+        ArrayBlockingQueue<Page> queue = new ArrayBlockingQueue<>(100);
+        ConcurrentHashMap<String, Integer> counts = new ConcurrentHashMap<>();
         ExecutorService executor = Executors.newCachedThreadPool();
         
         for (int i = 0; i< NUM_COUNTERS; ++i) {

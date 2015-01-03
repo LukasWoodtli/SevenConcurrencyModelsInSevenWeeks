@@ -10,6 +10,8 @@ import java.util.concurrent.BlockingQueue;
 /**
  *
  * @author Boot
+ * 
+ * Producer
  */
 public class Parser implements Runnable {
     private BlockingQueue<Page> queue;
