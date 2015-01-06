@@ -1,6 +1,13 @@
 (defn word-frequencies [words]
-	(reduce (fn [counts word] (assoc counts word
-							(inc (get counts word 0))))
-									{} words))
-									
-(word-frequencies ["one" "potato" "potato" "potato" "potato"])
+;; (reduce  f val coll)  f: anonymous function (fn ...), val: empty map ({}), coll: words
+   (reduce (fn [counts word]
+         ;; (assoc map key val)
+            (assoc counts word
+                ;; (get map key not-found)
+							(inc (get counts word 0))
+            )
+          ) {} words
+   )
+)
+
+(word-frequencies ["one" "potato" "two" "potato" "three" "potato" "four" "potato"])
