@@ -52,8 +52,16 @@ The seven Models
 
 Atomic vs. volatile
 ===================
-- Atomic operations/variables
-- volatile
+Atomic operations/variables
+---------------------------
+An atomic operation is an operation that happens in one single step. So the operation either has happend or hasn't.
+
+A variable is considered to be atomic if all operations on it happen in atomic manner.
+
+Volatile
+--------
+A volatile variable is guaranteed to be read from its original location (in memory) every time it is used. This is donne to prevent any optimisation by the compiler or runtime system.
+A volatile variable is usually not atomic by default.
 
 
 Thread-Safe and Reentrant (Qt)
