@@ -47,8 +47,50 @@ The seven Models
 - Does this model provide tools to help you write resilient or geographically distributed code?"
 
 
+Threads and Locks
+=================
+From [BUT2014]_ Chapter 2
 
-  
+1. Race condition: A race condition [...] is the behavior of a [...] software system where the 
+   output is dependent on the sequence or timing of other uncontrollable events. It becomes a bug 
+   when events do not happen in the order the programmer intended. (From [Wiki2015R]_)
+2. Memory Visibility: The [..] memory model defines when changes to memory made by one thread become 
+   visible to another thread.
+3. Deadlocks (& Livelocks): Deadlock is a danger whenever a thread tries to hold more than one lock. 
+   Happily, there is a simple rule that guarantees you will never deadlock - always acquire locks in a
+   fixed, global order.
+
+Grobal Ordering Rule
+--------------------
+To avoid deadlock always acquire locks in a fixed, global order.
+This completely avoids any deadlocks. But it's practically impossible to achive in any complex software.
+
+Calling Alien Methods
+---------------------
+[If we hold a lock an we call an alien method] that method could do anything, including acquiring another
+lock. If it does, then we've acquired two locks without knowing whether we've done so inthe right order.
+
+*The only solution is to avoid calling alien methods while holding a lock.*
+
+Wrap Up
+-------
+[...] three primary perils of threads and locks - race conditions, deadlock and memory visibility [...]
+rules that help us avoiding them:
+
+* Synchronize all access to shared variables.
+* Both the writing and the reading threads need to use synchronization.
+* Acquire multiple locks in a fixed, global order.
+* Don't call alien methods while holding a lock.
+* Hold locks for the shortest possible amount of time.
+
+*Double-Checked Locking is an anti-pattern!* [DLC]_
+ 
+
+Beyond Intrinsic Locks
+======================
+tbd
+
+
 
 Atomic vs. volatile
 ===================
@@ -80,3 +122,7 @@ References
 .. [BUT2014] Seven Concurrency Models in Seven Weeks When Threads Unravel by Paul Butcher Version: P1.0 (July 2014) https://pragprog.com/book/pb7con/seven-concurrency-models-in-seven-weeks
 
 .. [Qt2014] https://qt-project.org/doc/qt-5-snapshot/threads-reentrancy.html
+
+.. [Wiki2015R] http://en.wikipedia.org/wiki/Race_condition
+
+.. [DLC] http://www.cs.umd.edu/~pugh/java/memoryModel/DoubleCheckedLocking.html
