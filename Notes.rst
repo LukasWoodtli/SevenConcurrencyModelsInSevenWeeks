@@ -51,37 +51,38 @@ Threads and Locks
 =================
 From [BUT2014]_ Chapter 2
 
-1. Race condition: A race condition [...] is the behavior of a [...] software system where the 
+
+1. Race condition: " A race condition [...] is the behavior of a [...] software system where the 
    output is dependent on the sequence or timing of other uncontrollable events. It becomes a bug 
-   when events do not happen in the order the programmer intended. (From [Wiki2015R]_)
-2. Memory Visibility: The [..] memory model defines when changes to memory made by one thread become 
-   visible to another thread.
-3. Deadlocks (& Livelocks): Deadlock is a danger whenever a thread tries to hold more than one lock. 
+   when events do not happen in the order the programmer intended." (From [Wiki2015R]_)
+2. Memory Visibility: " The [..] memory model defines when changes to memory made by one thread become 
+   visible to another thread."
+3. Deadlocks (& Livelocks): "Deadlock is a danger whenever a thread tries to hold more than one lock. 
    Happily, there is a simple rule that guarantees you will never deadlock - always acquire locks in a
-   fixed, global order.
+   fixed, global order."
 
 Grobal Ordering Rule
 --------------------
-To avoid deadlock always acquire locks in a fixed, global order.
+"To avoid deadlock always acquire locks in a fixed, global order."
 This completely avoids any deadlocks. But it's practically impossible to achive in any complex software.
 
 Calling Alien Methods
 ---------------------
-[If we hold a lock an we call an alien method] that method could do anything, including acquiring another
-lock. If it does, then we've acquired two locks without knowing whether we've done so inthe right order.
+"[If we hold a lock an we call an alien method] that method could do anything, including acquiring another
+lock. If it does, then we've acquired two locks without knowing whether we've done so inthe right order."
 
-*The only solution is to avoid calling alien methods while holding a lock.*
+*"The only solution is to avoid calling alien methods while holding a lock."*
 
 Wrap Up
 -------
-[...] three primary perils of threads and locks - race conditions, deadlock and memory visibility [...]
+"[...] three primary perils of threads and locks - race conditions, deadlock and memory visibility [...]
 rules that help us avoiding them:
 
 * Synchronize all access to shared variables.
 * Both the writing and the reading threads need to use synchronization.
 * Acquire multiple locks in a fixed, global order.
 * Don't call alien methods while holding a lock.
-* Hold locks for the shortest possible amount of time.
+* Hold locks for the shortest possible amount of time."
 
 *Double-Checked Locking is an anti-pattern!* [DLC]_
  
