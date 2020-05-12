@@ -1,2 +1,0 @@
-#!/bin/bash
-rst2html.py Notes.rst Notes.html
