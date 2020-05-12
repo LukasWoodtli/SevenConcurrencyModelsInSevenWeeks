@@ -3,84 +3,108 @@ Notes taken from
 
 [TOC]
 
-# Introduction
+# Chapter 1 Introduction
 
 ## Concurrent or Parallel?
 
-"A concurrent program has multiple logical threads of control. These threads may or may not run in parallel."
+### Related but Different
 
-"A parallel program potentially runs more quickly than a sequential program by executing different parts of the computation simultaneously (in parallel). It may or may not have more than one logical thread of control."
+*"A concurrent program has multiple logical threads of control. These threads may or may not run in parallel."*
 
-"[...] concurrency is an aspect of the problem domain — your program needs to handle multiple simultaneous (or near-simultaneous) events."
+*"A parallel program potentially runs more quickly than a sequential program by executing different parts of the computation simultaneously (in parallel). It may or may not have more than one logical thread of control."*
 
-"Parallelism [...] is an aspect of the solution domain — you want to make your program faster by processing different portions of the problem in parallel."
+*"[...] concurrency is an aspect of the problem domain — your program needs to handle multiple simultaneous (or near-simultaneous) events."*
 
-"Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once."
+*"Parallelism [...] is an aspect of the solution domain — you want to make your program faster by processing different portions of the problem in parallel."*
 
+*"Concurrency is about dealing with lots of things at once. Parallelism is about doing lots of things at once."*
+
+
+### Beyond Sequencial Programming
+
+*"[...] traditional threads and locks don't provide any direct support for parallelism."*
+
+*"[...] concurrent programs are often nondetermistic - they will give different results depending on the precise timing of events."*
+
+*"Parallelism [...] doesn't necessarily imply nondetermism"*
+
+
+### Data Parallelism
+
+*"Data-parallel (sometimes called SIMD [...]) architectures are capable of performing the same operations on a large quantity of data in parallel."*
+
+# Chapter 2 Threads and Locks
+
+## The Simplest Thing That Could Possibly Work
+
+*"[Threads] also provide almost no help to the poor programmer, making programs very difficult to get right in the first place and even more difficult to maintain."*
+
+### they also provide almost no help to the poor programmer, making programs very difficult to get right in the first place and even more difficult to maintain.
+
+
+## Day 1: Mutual Exclusion and Memory Models
+
+*"[There is something very] basic you need to worry about when dealing with shared memory - the Memory Model."*
+
+### Creating a Thread
+
+*"Threads communicate with each other via shared memory."*
+
+### Mysterious Memory
+
+- *"The compiler is allowed to statically optimize your code by reordering things."*
+- *"The JVM is allowed to dynamically optimize your code by reordering things."*
+- *"The hardware you’re running on is allowed to optimize performance by reordering things."*
+
+*"Sometimes effects don’t become visible to other threads at all."*
+
+### Memory Visibility
+
+*"The Java memory model defines when changes to memory made by one thread become visible to another thread.""*
+
+### Multiple Locks
+
+*"Deadlock is a danger whenever a thread tries to hold more than one lock. Happily, there is a simple rule that guarantees you will never deadlock - always acquire locks in a fixed, global order."*
+
+
+### The Perils of Alien Methods
+
+*"avoid calling alien methods while holding a lock"*
+
+
+### Day 1 Wrap Up
+
+*"[...] three primary perils of threads and locks - race conditions, deadlock and memory visibility [...]
+rules that help us avoiding them:"*
+
+- *"Synchronize all access to shared variables."*
+- *Both the writing and the reading threads need to use synchronization."*
+- *Acquire multiple locks in a fixed, global order."*
+- *Don't call alien methods while holding a lock."*
+- *Hold locks for the shortest possible amount of time."*
+
+
+### Additional Notes
+
+#### Race Condition
+
+A race condition is the behavior of a software system where the output is dependent on the sequence or timing of other uncontrollable events. It becomes a bug when events do not happen in the order the programmer intended.
+
+#### Memory Visibility
+
+The memory model defines when changes to memory made by one thread become visible to another thread.
+
+#### Deadlocks & Livelocks
+
+Deadlock is a danger whenever a thread tries to hold more than one lock. 
+Happily, there is a simple rule that guarantees you will never deadlock - always acquire locks in a fixed, global order.
 
 <!--
-Beyond Sequencial Programming
+
 -----------------------------
-"[...] traditional threads and locks don't provide any direct support for parallelism."
-
-"[...] concurrent programs are often nondetermistic."
-
-"Parallelism [...] doesn't necessarily imply nondetermism"
 
 
-The seven Models
-----------------
 
-"Bear the following questions in mind:
-
-- Is the model applicable to solving concurrent problems, parallel problems, or both?
-- Which parallel architecture or architectures can this model target?
-- Does this model provide tools to help you write resilient or geographically distributed code?"
-
-
-Threads and Locks
-=================
-From [BUT2014]_ Chapter 2
-
-
-1. Race condition: " A race condition [...] is the behavior of a [...] software system where the 
-   output is dependent on the sequence or timing of other uncontrollable events. It becomes a bug 
-   when events do not happen in the order the programmer intended." (From [Wiki2015R]_)
-2. Memory Visibility: " The [..] memory model defines when changes to memory made by one thread become 
-   visible to another thread."
-3. Deadlocks (& Livelocks): "Deadlock is a danger whenever a thread tries to hold more than one lock. 
-   Happily, there is a simple rule that guarantees you will never deadlock - always acquire locks in a
-   fixed, global order."
-
-Grobal Ordering Rule
---------------------
-"To avoid deadlock always acquire locks in a fixed, global order."
-This completely avoids any deadlocks. But it's practically impossible to achive in any complex software.
-
-Calling Alien Methods
----------------------
-"[If we hold a lock an we call an alien method] that method could do anything, including acquiring another
-lock. If it does, then we've acquired two locks without knowing whether we've done so inthe right order."
-
-*"The only solution is to avoid calling alien methods while holding a lock."*
-
-Wrap Up
--------
-"[...] three primary perils of threads and locks - race conditions, deadlock and memory visibility [...]
-rules that help us avoiding them:
-
-* Synchronize all access to shared variables.
-* Both the writing and the reading threads need to use synchronization.
-* Acquire multiple locks in a fixed, global order.
-* Don't call alien methods while holding a lock.
-* Hold locks for the shortest possible amount of time."
-
-*Double-Checked Locking is an anti-pattern!* [DLC]_
- 
-
-Beyond Intrinsic Locks
-======================
-tbd
 
 
 
@@ -96,16 +120,6 @@ Volatile
 --------
 A volatile variable is guaranteed to be read from its original location (in memory) every time it is used. This is donne to prevent any optimisation by the compiler or runtime system.
 A volatile variable is usually not atomic by default.
-
-
-Thread-Safe and Reentrant (Qt)
-==============================
-From [Qt2014]_
-
-"A thread-safe function can be called simultaneously from multiple threads, even when the invocations use shared data, because all references to the shared data are serialized."
-
-"A reentrant function can also be called simultaneously from multiple threads, but only if each invocation uses its own data.
-Hence, a thread-safe function is always reentrant, but a reentrantfunction is not always thread-safe."
 
 
 -->
