@@ -8,4 +8,4 @@ before_install:
 
 
 script:
-  - docker run --rm -it -v $TRAVIS_BUILD_DIR:/approval-tests-java-example -w /approval-tests-java-example adoptopenjdk/openjdk11:jdk-11.0.3.7 ./gradlew check integrationTest
+  - docker run --rm -it -v $TRAVIS_BUILD_DIR/1_ThreadsAndLocks:/1_ThreadsAndLocks -w /1_ThreadsAndLocks adoptopenjdk/openjdk11:jdk-11.0.3.7 ./gradlew check integrationTest
