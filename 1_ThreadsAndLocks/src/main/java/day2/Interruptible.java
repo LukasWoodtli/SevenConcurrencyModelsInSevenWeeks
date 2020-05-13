@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mycompany.interruptible;
+package day2;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- *
- * @author Boot
- */
 public class Interruptible {
     public static void main(String[] args) throws InterruptedException {
         final ReentrantLock l1 = new ReentrantLock();

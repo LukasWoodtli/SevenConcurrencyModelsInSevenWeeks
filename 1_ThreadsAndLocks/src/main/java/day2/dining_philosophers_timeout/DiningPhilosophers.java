@@ -1,16 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package com.mycompany.diningphilosopherstimeout;
+package day2.dining_philosophers_timeout;
 
 import java.util.concurrent.locks.ReentrantLock;
 
-/**
- *
- * @author Boot
- */
 public class DiningPhilosophers {
     public static void main(String[] args) {
         Philosopher[] philosophers = new Philosopher[5];
