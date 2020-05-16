@@ -1,12 +1,11 @@
-package day3.wordcount.v3_wordcount_synchronized_hashmap;
+package day3.wordcount.common;
 
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.events.XMLEvent;
+import java.io.InputStream;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 public class Pages implements Iterable<Page> {
 
@@ -18,8 +17,17 @@ public class Pages implements Iterable<Page> {
         this.fileName = fileName;
     }
 
+    public Iterator<Page> iterator() {
+        try {
+            return new PageIterator();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private class PageIterator implements Iterator<Page> {
-        private XMLEventReader reader;
+
+        private final XMLEventReader reader;
         private int remainingPages;
 
         public PageIterator() throws Exception {
@@ -38,7 +46,6 @@ public class Pages implements Iterable<Page> {
                 XMLEvent event;
                 String title = "";
                 String text = "";
-
                 while (true) {
                     event = reader.nextEvent();
                     if (event.isStartElement()) {
@@ -55,7 +62,6 @@ public class Pages implements Iterable<Page> {
                                     if (event.asEndElement().getName().getLocalPart().equals("page")) {
                                         --remainingPages;
                                         return new WikiPage(title, text);
-
                                     }
                                 }
                             }
@@ -69,15 +75,6 @@ public class Pages implements Iterable<Page> {
 
         public void remove() {
             throw new UnsupportedOperationException();
-        }
-
-    }
-
-    public Iterator<Page> iterator() {
-        try {
-            return new PageIterator();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
         }
     }
 }

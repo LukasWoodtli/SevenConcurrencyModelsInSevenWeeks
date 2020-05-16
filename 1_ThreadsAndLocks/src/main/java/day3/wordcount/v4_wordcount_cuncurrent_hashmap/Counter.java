@@ -1,5 +1,8 @@
 package day3.wordcount.v4_wordcount_cuncurrent_hashmap;
 
+import day3.wordcount.common.Page;
+import day3.wordcount.common.Words;
+
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
 

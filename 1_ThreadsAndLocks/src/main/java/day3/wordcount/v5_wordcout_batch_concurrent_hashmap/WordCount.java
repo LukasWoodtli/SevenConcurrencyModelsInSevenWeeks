@@ -1,5 +1,9 @@
 package day3.wordcount.v5_wordcout_batch_concurrent_hashmap;
 
+import day3.wordcount.common.Page;
+import day3.wordcount.common.Parser;
+import day3.wordcount.common.PoisonPill;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;

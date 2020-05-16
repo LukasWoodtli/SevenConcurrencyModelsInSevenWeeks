@@ -1,7 +1,10 @@
 package day3.wordcount.v2_wordcount_producer_consumer;
 
+import day3.wordcount.common.Page;
+import day3.wordcount.common.Parser;
+import day3.wordcount.common.PoisonPill;
+
 import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 
 

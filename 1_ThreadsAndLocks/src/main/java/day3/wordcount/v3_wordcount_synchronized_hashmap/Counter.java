@@ -1,5 +1,8 @@
 package day3.wordcount.v3_wordcount_synchronized_hashmap;
 
+import day3.wordcount.common.Page;
+import day3.wordcount.common.Words;
+
 import java.util.Map;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.locks.ReentrantLock;
