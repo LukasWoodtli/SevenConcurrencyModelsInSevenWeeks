@@ -1,12 +1,11 @@
-package day3.wordcount.v2_wordcount_producer_consumer;
+package day3.wordcount.v4_wordcount_cuncurrent_hashmap;
 
-import java.io.FileInputStream;
 import java.io.InputStream;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
-import javax.xml.stream.events.XMLEvent;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
+import javax.xml.stream.events.XMLEvent;
 
 public class Pages implements Iterable<Page> {
 
@@ -19,7 +18,6 @@ public class Pages implements Iterable<Page> {
     }
 
     private class PageIterator implements Iterator<Page> {
-
         private XMLEventReader reader;
         private int remainingPages;
 
@@ -27,16 +25,20 @@ public class Pages implements Iterable<Page> {
             remainingPages = maxPages;
             InputStream inputStream = getClass()
                     .getClassLoader().getResourceAsStream("enwiki-latest-pages-articles26.xml");
+
             reader = XMLInputFactory.newInstance().createXMLEventReader(inputStream);
         }
 
-        public boolean hasNext() { return remainingPages > 0; }
+        public boolean hasNext() {
+            return remainingPages > 0;
+        }
 
         public Page next() {
             try {
                 XMLEvent event;
                 String title = "";
                 String text = "";
+
                 while (true) {
                     event = reader.nextEvent();
                     if (event.isStartElement()) {
@@ -53,17 +55,22 @@ public class Pages implements Iterable<Page> {
                                     if (event.asEndElement().getName().getLocalPart().equals("page")) {
                                         --remainingPages;
                                         return new WikiPage(title, text);
+
                                     }
                                 }
                             }
                         }
                     }
                 }
-            } catch (Exception e) {}
+            } catch (Exception e) {
+            }
             throw new NoSuchElementException();
         }
 
-        public void remove() { throw new UnsupportedOperationException(); }
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+
     }
 
     public Iterator<Page> iterator() {
