@@ -9,3 +9,4 @@ before_install:
 
 script:
   - docker run --rm -it -v $TRAVIS_BUILD_DIR/1_ThreadsAndLocks:/1_ThreadsAndLocks -w /1_ThreadsAndLocks adoptopenjdk/openjdk11:jdk-11.0.3.7 ./gradlew build
+  - docker run --rm -it -v $TRAVIS_BUILD_DIR/2_FunctionalProgramming/functional:/2_FunctionalProgramming/functional -w /2_FunctionalProgramming/functional clojure:openjdk-13-lein lein test
