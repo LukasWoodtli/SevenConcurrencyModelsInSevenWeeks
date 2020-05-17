@@ -1,5 +1,9 @@
 package day3.wordcount.v1_wordcount;
 
+import day3.wordcount.common.Page;
+import day3.wordcount.common.Pages;
+import day3.wordcount.common.Words;
+
 import java.util.HashMap;
 
 public class WordCount {

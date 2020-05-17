@@ -4,7 +4,6 @@ import day3.wordcount.common.Page;
 import day3.wordcount.common.Parser;
 import day3.wordcount.common.PoisonPill;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
