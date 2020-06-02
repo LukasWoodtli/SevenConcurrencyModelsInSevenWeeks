@@ -1,4 +1,5 @@
-(ns functional.sum)
+(ns functional.sum
+  (:require [clojure.core.reducers :as r]))
 
 (defn recursive-sum [numbers]
   (if (empty? numbers)
@@ -14,3 +15,6 @@
 
 (defn apply-sum [numbers]
   (apply + numbers))
+
+
+(defn parallel-sum [numbers] (r/fold + numbers))

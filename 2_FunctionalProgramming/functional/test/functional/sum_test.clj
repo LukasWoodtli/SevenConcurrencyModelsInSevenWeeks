@@ -33,3 +33,15 @@
 (deftest apply-sum-test
   (testing "apply-sum"
     (is (= (apply-sum [3 4 2]) 9))))
+
+
+(def numbers (into [] (range 0 10000000)))
+
+(println "Sum 1.")
+(time (sum numbers))
+(println "Sum 2.")
+(time (sum numbers))
+(println "Parallel Sum 1.")
+(time (parallel-sum numbers))
+(println "Parallel Sum 2.")
+(time (parallel-sum numbers))
