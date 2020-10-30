@@ -1,4 +1,4 @@
-(ns functional.sum
+(ns functional-programming.sum
   (:require [clojure.core.reducers :as r]))
 
 (defn recursive-sum [numbers]

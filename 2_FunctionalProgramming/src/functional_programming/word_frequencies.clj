@@ -1,4 +1,4 @@
-(ns functional.word-frequencies)
+(ns functional-programming.word-frequencies)
 
 (defn word-frequencies [words]
   (reduce

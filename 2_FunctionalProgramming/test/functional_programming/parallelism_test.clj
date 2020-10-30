@@ -1,6 +1,6 @@
-(ns wordcount.core-test
+(ns functional-programming.parallelism-test
   (:require [clojure.test :refer :all]
-            [wordcount.core :refer :all]
+            [functional-programming.parallelism :refer :all]
             [clojure.core.reducers :as r]))
 
 (deftest pmap-frequencies-test

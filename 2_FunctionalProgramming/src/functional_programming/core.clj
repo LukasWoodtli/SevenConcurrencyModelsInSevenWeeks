@@ -1,4 +1,4 @@
-(ns functional.core
+(ns functional-programming.core
   (:gen-class))
 
 (defn -main

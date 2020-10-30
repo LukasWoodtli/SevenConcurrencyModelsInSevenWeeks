@@ -1,6 +1,6 @@
-(ns functional.sum-test
+(ns functional-programming.sum-test
   (:require [clojure.test :refer :all]
-            [functional.sum :refer :all]))
+            [functional-programming.sum :refer :all]))
 
 (deftest recursive-sum-test
   (testing "Own recursive sum"

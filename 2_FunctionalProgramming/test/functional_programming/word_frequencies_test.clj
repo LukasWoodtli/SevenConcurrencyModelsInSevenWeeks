@@ -1,6 +1,6 @@
-(ns functional.word-frequencies-test
+(ns functional-programming.word-frequencies-test
   (:require [clojure.test :refer :all]
-            [functional.word-frequencies :refer :all]))
+            [functional-programming.word-frequencies :refer :all]))
 
 (deftest word-frequencies-test
   (testing "Test word frequencies"

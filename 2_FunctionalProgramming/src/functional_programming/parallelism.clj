@@ -1,4 +1,4 @@
-(ns wordcount.core
+(ns functional-programming.parallelism
   (:gen-class)
   (:require [clojure.core.protocols :refer [CollReduce coll-reduce]]
             [clojure.core.reducers :as r]))

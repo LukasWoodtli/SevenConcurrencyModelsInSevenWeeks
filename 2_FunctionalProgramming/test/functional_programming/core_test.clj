@@ -1,6 +1,6 @@
-(ns functional.core-test
+(ns functional-programming.core-test
   (:require [clojure.test :refer :all]
-            [functional.core :refer :all]))
+            [functional-programming.core :refer :all]))
 
 
 ;; lazy
