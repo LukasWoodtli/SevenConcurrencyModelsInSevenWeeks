@@ -1,6 +1,5 @@
 (ns functional-programming.concurrency-test
   (:require [clojure.test :refer :all]
-            [functional-programming.concurrency :refer :all]
              [clojure.core.reducers :as r]))
 
 
