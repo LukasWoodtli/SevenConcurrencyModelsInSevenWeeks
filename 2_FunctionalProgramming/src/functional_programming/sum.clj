@@ -6,6 +6,8 @@
     0
     (+ (first numbers) (recursive-sum (rest numbers)))))
 
+; Reduce takes three arguments:
+; a function, an initial value, and a collection
 (defn reduce-sum [numbers]
   (reduce (fn [acc x] (+ acc x)) 0 numbers))
 

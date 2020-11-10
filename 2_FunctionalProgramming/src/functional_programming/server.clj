@@ -35,7 +35,9 @@
 (defn sentence-join [x y]
   (if (is-sentence? x) y (str x "" y)))
 
-
+; `mapcat`: like `map` but avoiding to have
+; a collection of collection by putting results
+; directly into one collection
 (defn strings->sentences [strings]
   (filter is-sentence?
           (reductions sentence-join

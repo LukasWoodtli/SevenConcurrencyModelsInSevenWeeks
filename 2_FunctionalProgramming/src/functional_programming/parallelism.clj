@@ -13,7 +13,10 @@
 ; (merge-with f & maps) is available in the standard lib
 (def merge-counts (partial merge-with +))
 
-
+; `pmap`: like `map` but it's applied in parallel
+; It's semi-lazy: the parallel computation stays ahead 
+; of the consumption, but it won't realize
+; the entire result unless required.
 (defn count-word-parallel [pages]
   (reduce (partial merge-with +)
           (pmap #(frequencies (get-words %)) pages)))
