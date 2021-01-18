@@ -5,10 +5,12 @@ services:
 
 before_install:
   - docker pull adoptopenjdk/openjdk11:jdk-11.0.3.7
+  - docker pull clojure:openjdk-13-lein 
+  - docker pull elixir:1.11
 
 
 script:
   - docker run --rm -it -v $TRAVIS_BUILD_DIR/1_ThreadsAndLocks:/1_ThreadsAndLocks -w /1_ThreadsAndLocks adoptopenjdk/openjdk11:jdk-11.0.3.7 ./gradlew build
   - docker run --rm -it --memory=4g -p 3000:3000 -v $TRAVIS_BUILD_DIR/2_FunctionalProgramming/:/2_FunctionalProgramming/ -w /2_FunctionalProgramming/ clojure:openjdk-13-lein lein test
   - docker run --rm -it --memory=4g -v $TRAVIS_BUILD_DIR/3_Clojure/clojure-way/:/3_Clojure/clojure-way/ -w /3_Clojure/clojure-way/ clojure:openjdk-13-lein lein test
-  
+  - docker run --rm -it -v $TRAVIS_BUILD_DIR/4_Actors/actors:/4_Actors/actors -w /4_Actors/actors elixir:1.11 mix test
