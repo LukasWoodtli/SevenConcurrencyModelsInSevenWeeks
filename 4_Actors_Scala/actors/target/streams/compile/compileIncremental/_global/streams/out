@@ -1,0 +1,57 @@
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
+[0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
+[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 0 products, 0 sources, 0 libraries[0m
+[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/hello_actors/HelloActors.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(${BASE}/src/main/scala/hello_actors/HelloActors.scala), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())[0m
+[0m[[0m[0mdebug[0m] [0m[0mFull compilation, no sources in previous analysis.[0m
+[0m[[0m[0mdebug[0m] [0m[0mall 1 sources are invalidated[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all sources: number of invalidated sources > 50.0% of all sources[0m
+[0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.13:1.4.4:compile for Scala 2.13.4[0m
+[0m[[0m[0minfo[0m] [0m[0mNon-compiled module 'compiler-bridge_2.13' for Scala 2.13.4. Compiling...[0m
+[0m[[0m[0mdebug[0m] [0m[0mCreating plain compiler interface for 2.13.4.[0m
+[0m[[0m[0mdebug[0m] [0m[0m  > Arguments: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	-d[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2d5b6e02[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-nowarn[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.4/scala-library-2.13.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-interface/1.4.4/compiler-interface-1.4.4.jar:/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/util-interface/1.4.0/util-interface-1.4.0.jar:/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-sbt/compiler-bridge_2.13/1.4.4/compiler-bridge_2.13-1.4.4-sources.jar:/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.13.4/scala-compiler-2.13.4.jar:/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.4/scala-reflect-2.13.4.jar:/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/jline/jline/3.16.0/jline-3.16.0.jar:/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/net/java/dev/jna/jna/5.3.1/jna-5.3.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/scala/ZincCompat.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/API.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/AbstractZincFile.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/Analyzer.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/CallbackGlobal.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/ClassName.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/Compat.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/CompilerBridge.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/ConsoleBridge.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/DelegatingReporter.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/Dependency.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/ExtractAPI.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/ExtractUsedNames.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/GlobalHelpers.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/InteractiveConsoleBridge.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/InteractiveConsoleFactoryBridge.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/InteractiveConsoleHelper.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/InteractiveConsoleResponse.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/JarUtils.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/JavaUtils.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/LocalToNonLocalClass.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/LocateClassFile.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/Log.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/Message.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/var/folders/h5/kq2qpsls4fs7810xgn90q2gr0000gn/T/sbt_2abd3b37/xsbt/ScaladocBridge.scala[0m
+[0m[[0m[0mdebug[0m] [0m[0m      [0m
+[0m[[0m[0minfo[0m] [0m[0m  Compilation completed in 9.188s.[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 6550befe for Scala compiler version 2.13.4[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.4/scala-library-2.13.4.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes:/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/akka/akka-actor_2.13/2.6.11/akka-actor_2.13-2.6.11.jar:/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/com/typesafe/config/1.4.0/config-1.4.0.jar:/Users/lukaswoodtli/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/modules/scala-java8-compat_2.13/0.9.0/scala-java8-compat_2.13-0.9.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 14.326369176 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m

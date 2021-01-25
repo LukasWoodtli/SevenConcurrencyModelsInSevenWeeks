@@ -1,0 +1,18 @@
+[0m[[0m[0mdebug[0m] [0m[0mCreated transactional ClassFileManager with tempDir = /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes.bak[0m
+[0m[[0m[0mdebug[0m] [0m[0mAbout to delete class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mWe backup class files:[0m
+[0m[[0m[0mdebug[0m] [0m[0mRegistering generated classes:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	HelloActors$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Talker.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Talker$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Master$$anonfun$receive$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Praise$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	HelloActors.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Greet.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	HelloActors$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Greet$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Celebrate.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Master.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Praise.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Celebrate$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mRemoving the temporary directory used for backing up class files: /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes.bak[0m

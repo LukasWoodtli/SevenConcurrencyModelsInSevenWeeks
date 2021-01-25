@@ -1,0 +1,35 @@
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/actors_2.13-0.1.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Celebrate.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Celebrate.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Talker$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Talker$$anonfun$receive$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Celebrate$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Celebrate$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Praise$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Praise$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/HelloActors$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/HelloActors$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Master.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Master.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/HelloActors$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/HelloActors$delayedInit$body.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Talker.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Talker.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Greet.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Greet.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Master$$anonfun$receive$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Master$$anonfun$receive$2.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Praise.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Praise.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/Greet$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/Greet$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	org/woodtlilukas/hello_actors/HelloActors.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/lukaswoodtli/Development/SevenConcurrencyModelsInSevenWeeks/4_Actors_Scala/actors/target/scala-2.13/classes/org/woodtlilukas/hello_actors/HelloActors.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m
