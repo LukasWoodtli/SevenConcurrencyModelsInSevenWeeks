@@ -16,3 +16,4 @@ script:
   - docker run --rm -it -v $TRAVIS_BUILD_DIR/4_Actors_Elixir/actors:/4_Actors_Elixir/actors -w /4_Actors_Elixir/actors elixir:1.11 mix test --trace
   - docker run --rm -it -v $TRAVIS_BUILD_DIR/4_Actors_Elixir/cache:/4_Actors_Elixir/cache -w /4_Actors_Elixir/cache elixir:1.11 mix test --trace
   - docker run --rm -it -v $TRAVIS_BUILD_DIR/4_Actors_Elixir/cache_gen_server:/4_Actors_Elixir/cache_gen_server -w /4_Actors_Elixir/cache_gen_server elixir:1.11 mix test --trace
+  - docker run --rm -it -v $TRAVIS_BUILD_DIR/4_Actors_Elixir/word_count:/4_Actors_Elixir/word_count -w /4_Actors_Elixir/word_count elixir:1.11 mix compile
