@@ -61,7 +61,7 @@ static void print_device_info(cl_device_id device) {
   print_device_param_sizet(device, CL_DEVICE_MAX_WORK_GROUP_SIZE, "Workgroup size");
 }
 
-static void print_platfor m_info(cl_platform_id platform) {
+static void print_platform_info(cl_platform_id platform) {
   print_platform_param(platform, CL_PLATFORM_NAME, "Name");
   print_platform_param(platform, CL_PLATFORM_VENDOR, "Vendor");
 
